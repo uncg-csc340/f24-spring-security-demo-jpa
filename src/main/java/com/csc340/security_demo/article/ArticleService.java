@@ -26,14 +26,24 @@ public class ArticleService {
     }
 
     public void saveArticle(Article article) {
-        article.setPreview(article.getContents().substring(0, 50));
+        if(article.getContents().length()>50){
+            article.setPreview(article.getContents().substring(0, 49));
+        }
+        else {
+            article.setPreview(article.getContents());
+        }
         article.setCreatedAt(new Date(System.currentTimeMillis()));
         article.setUpdatedAt(new Date(System.currentTimeMillis()));
         repo.save(article);
     }
 
     public void updateArticle(Article article){
-        article.setPreview(article.getContents().substring(0, 50));
+        if(article.getContents().length()>50){
+            article.setPreview(article.getContents().substring(0, 49));
+        }
+        else {
+            article.setPreview(article.getContents());
+        }
         article.setUpdatedAt(new Date(System.currentTimeMillis()));
         repo.save(article);
     }
