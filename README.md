@@ -1,6 +1,9 @@
 # su24-security-demo
 ## This should be the last thing that you add to your project, after everything else is working.
 ## Notes:
+- When you install, make sure to import the database file `publisher.sql`
+- Use one of the populated user accounts to login.
+- The password is `password` for each of them.
 - This repository includes a dependency to [Spring Security](https://github.com/uncg-csc340/f24-spring-security-demo-jpa/blob/c925428ece52b54e8d46a3739acbbb0d06823637/pom.xml#L50). This is how it handles authentication and authorization.
      - When you start at Spring Initializr and add a dependency to Spring Security, this will also add a ThymeLeaf dependency for Security as well.
      - The rest of the dependencies should already look familiar: Spring Web, ThymeLeaf, JPA, MySQL.
